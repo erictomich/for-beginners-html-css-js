@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML :: Learning Path :: 001</title>
+    </head>
+    <body>
+        <h1 id="title" data-translate="A primeira trilha de aprendizagem do HTML" data-original="The First learning path of HTML">The First learning path of HTML</h1>
+        <h2>What is HTML?</h2>
+        <p>Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.</p>
+        <h2>What can we do with html?</h2>
+        <ul>
+            <li data-translate="Desenvolvimento de páginas da web" data-original="Web pages development">Web pages development</li>
+            <li data-translate="Crição de documentos web" data-original="Web document creation">Web document creation</li>
+            <li data-translate="Navegação na internet" data-original="Internet navigation">Internet navigation</li>
+            <li>Cutting edge feature</li>
+            <li>Responsive images on web pages</li>
+            <li>Client-side storage</li>
+            <li>Offline capabilities usage</li>
+            <li>Data Entry support with HTML</li>
+            <li>Game development usage</li>
+            <li>Native APIs usage to enrich a website</li>
+        </ul>
+        <h2>References</h2>
+        <a href="https://www.educba.com/uses-of-html/">Introduction to Uses of HTML</a><br>
+        <a href="https://blog.bitsrc.io/6-apis-frontend-developers-should-know-3a94815c53dd">6 APIs Frontend Developers Should Know</a>
+
+        <img src="https://via.placeholder.com/300/09f.png/fff" alt="w3schools" style="width:120px;height:150px">
+    </body>
+    <script>
+        var element = document.getElementById('title');
+       
+        element.onmouseover = function() {
+            event.target.style.color = "red";
+            event.target.innerHTML = event.target.getAttribute("data-translate");
+        };
+        element.onmouseleave = function() {
+            event.target.style.color = "black";
+            event.target.innerHTML = event.target.getAttribute("data-original");
+        };
+
+
+       var others = document.getElementsByTagName('li');
+       console.log(others);
+
+       for (var i = 0; i < others.length; i++) {
+
+            others[i].onmouseover = function() {
+                if(event.target.getAttribute("data-translate") !== null) {
+                    event.target.style.color = "red";
+                    event.target.innerHTML = event.target.getAttribute("data-translate");
+                }
+            };
+            others[i].onmouseleave = function() {
+                if(event.target.getAttribute("data-original") !== null) {
+                    event.target.style.color = "black";
+                    event.target.innerHTML = event.target.getAttribute("data-original");     
+                }
+            };
+        }
+
+
+
+    </script>
+</html>
